@@ -1,0 +1,14 @@
+{
+  "name": "liberte-esthetique",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "iview": "^2.6.0",
+    "nuxt": "^1.0.0-rc11"
+  },
+  "devDependencies": {
+    "node-sass": "^4.6.0",
+    "sass-loader": "^6.0.6"
+  }
+}
