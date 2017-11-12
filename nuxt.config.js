@@ -1,12 +1,10 @@
-const webpack = require('webpack')
-
 module.exports = {
     head: {
         title: 'Liberté Esthetique',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+            { hid: 'description', name: 'Liberté Esthetique', content: 'Liberté Esthetique website' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -18,12 +16,12 @@ module.exports = {
     },
     loading: { color: '#3bbca1' },
     build: {
-        vendor: [
-            'iview'
-        ]
+        vendor: ['iview']
     },
     css: [
-        { src: '~assets/css/main.scss', lang: 'scss' },
-        'iview/dist/styles/iview.css'
+        { src: '~/assets/css/main.scss', lang: 'scss' },
+    ],
+    plugins: [
+      { src: '~/plugins/iview', ssr: false }
     ]
 }
