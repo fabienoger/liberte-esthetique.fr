@@ -1,9 +1,15 @@
 <template>
   <main role="main">
-    Produits
+    <product-home-list></product-home-list>
   </main>
 </template>
 
 <script>
-export default {}  
+import ProductHomeList from '~/components/product/home-list.vue'
+
+export default {
+  components: {
+    ProductHomeList
+  }
+}
 </script>

@@ -19,9 +19,9 @@ module.exports = {
         vendor: ['iview']
     },
     css: [
-        { src: '~/assets/css/main.scss', lang: 'scss' },
+      '@/assets/css/main.scss'
     ],
     plugins: [
-      { src: '~/plugins/iview', ssr: false }
+      { src: '~/plugins/iview', ssr: true }
     ]
 }
