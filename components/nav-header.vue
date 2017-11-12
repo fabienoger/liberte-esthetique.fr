@@ -6,14 +6,18 @@
       </div>
         <Menu mode="horizontal" theme="light" active-name="1">
             <div class="header-nav">
-                <MenuItem name="1">
-                    <Icon type="home"></Icon>
-                    Accueil
-                </MenuItem>
-                <MenuItem name="2">
-                    <Icon type="email"></Icon>
-                    Contact
-                </MenuItem>
+                <nuxt-link to="/">
+                  <MenuItem name="1">
+                      <Icon type="home"></Icon>
+                      Accueil
+                  </MenuItem>
+                </nuxt-link>
+                <nuxt-link to="/contact">
+                  <MenuItem name="2">
+                      <Icon type="email"></Icon>
+                      Contact
+                  </MenuItem>
+                </nuxt-link>
             </div>
         </Menu>
     </div>

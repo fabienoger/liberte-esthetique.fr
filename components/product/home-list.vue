@@ -13,6 +13,7 @@
 
 <script>
 import HomeItem from '~/components/product/home-item.vue'
+import { products } from '~/lib/data.js'
 
 export default {
   components: {
@@ -20,30 +21,7 @@ export default {
   },
   data() {
     return {
-      products: [{
-        title: 'JetPeel Esthetic',
-        description:
-          '<p>Un soin anti-âge révolutionnaire</p>' +
-          '<p>Lèvres redessinées - ridules estompées</p>' +
-          '<p>Sillons naso-géniens atténués</p>' +
-          '<p>Vergetures et cicatrices lissées</p>',
-        img: 'jetpeel-esthetic-logo.png'
-      }, {
-        title: 'Médical Cryo System',
-        description:
-          '<p>1 à 2 séances seulement</p>' +
-          '<p>Élimination définitive des amas graisseux</p>' +
-          '<p>Sans douleur, sans anesthésie, sans contrainte</p>',
-        img: 'jetpeel-esthetic-logo.png'
-      }, {
-        title: 'Reju Light',
-        description:
-          '<p>Rapide et indolore</p>' +
-          '<p>Sans effet secondaire</p>' +
-          '<p>Pour tout type de peau</p>' +
-          '<p>Pour hommes & femmes</p>',
-        img: 'jetpeel-esthetic-logo.png'
-      }]
+      products
     }
   }
 }

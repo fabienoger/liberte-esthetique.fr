@@ -19,8 +19,7 @@ export default {
   },
   methods: {
     redirect() {
-      console.log('redirect')
-      this.$router.push({ path: '/product' })
+      this.$router.push({ path: `/product/${this.product.id}` })
     }
   }
 }
