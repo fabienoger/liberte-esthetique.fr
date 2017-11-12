@@ -29,21 +29,6 @@
 </template>
 
 <style lang="scss" scoped>
-// footer {
-//    position: fixed;
-//    left: 0px;
-//    bottom: 0px;
-//    height: 30px;
-//    width: 100%;
-//    background: #999;
-// }
-
-/* IE 6 */
-* html footer {
-   position: absolute;
-   top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
-}
-
 .footer-distributed {
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -55,10 +40,6 @@
 	padding: 50px 60px 40px;
 	margin-top: 80px;
 	overflow: hidden;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 /* Footer left */

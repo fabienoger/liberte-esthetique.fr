@@ -1,11 +1,11 @@
 <template>
   <header class="nav-header">
-    <div class="layout">
-      <div class="layout-title">
+    <div class="header">
+      <div class="header-title">
         Liberté Esthetique
       </div>
         <Menu mode="horizontal" theme="light" active-name="1">
-            <div class="layout-nav">
+            <div class="header-nav">
                 <MenuItem name="1">
                     <Icon type="home"></Icon>
                     Accueil
@@ -23,18 +23,18 @@
 <style lang="scss" scoped>
 @import "~assets/css/variables.scss";
 
-.layout {
+.header {
   border: 1px solid #d7dde4;
   background: #f5f7f9;
 
-  .layout-title {
+  .header-title {
     background-color: $primary-color;
     color: $primary-color-inverse;
     padding: 15px 0;
     text-align: center;
     font-size: 2em;
   }
-  .layout-nav {
+  .header-nav {
     width: 220px;
     margin: 0 auto;
   }
