@@ -5,7 +5,8 @@
   },
   "dependencies": {
     "iview": "^2.6.0",
-    "nuxt": "^1.0.0-rc11"
+    "nuxt": "^1.0.0-rc11",
+    "vue-video": "^0.1.7"
   },
   "devDependencies": {
     "node-sass": "^4.6.0",
