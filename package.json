@@ -1,12 +1,14 @@
 {
   "name": "liberte-esthetique",
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "HOST=0.0.0.0 PORT=3000 nuxt start"
   },
   "dependencies": {
     "iview": "^2.6.0",
     "nuxt": "^1.0.0-rc11",
-    "vue-video": "^0.1.7"
+    "vue-video-player": "^4.0.6"
   },
   "devDependencies": {
     "node-sass": "^4.6.0",

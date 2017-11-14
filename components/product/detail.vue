@@ -1,7 +1,14 @@
 <template>
   <div class="product-detail">
-    <div class="video-wrapper">
-      <v-video :sources="video.sources"></v-video>
+    <div class="spin-container" v-if="loading">
+      <Spin size="large" fix></Spin>
+    </div>
+    <div class="video-wrapper" v-show="!loading"
+         @play="onPlayerPlay($event)"
+         @pause="onPlayerPause($event)"
+         @ready="playerReadied"
+         @statechanged="playerStateChanged($event)"
+         v-video-player:videoPlayer="{ sources: video.sources }">
     </div>
     <div class="description-wrapper">
       <div v-html="product.description"></div>
@@ -10,8 +17,6 @@
 </template>
 
 <script>
-import vVideo from 'vue-video'
-
 export default {
   props: {
     product: {
@@ -19,8 +24,15 @@ export default {
       required: true
     }
   },
-  components: {
-    vVideo
+  data() {
+    return {
+      loading: true
+    }
+  },
+  methods: {
+    playerReadied(e) {
+      this.loading = false
+    }
   },
   computed: {
     video() {
