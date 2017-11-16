@@ -22,7 +22,7 @@ module.exports = {
       '@/assets/css/main.scss'
     ],
     plugins: [
-      { src: '~/plugins/iview', ssr: true },
+      { src: '~/plugins/iview', ssr: false },
       { src: '~/plugins/vue-video-player', ssr: true }
     ]
 }
