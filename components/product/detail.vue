@@ -3,12 +3,8 @@
     <div class="spin-container" v-if="loading">
       <Spin size="large" fix></Spin>
     </div>
-    <div class="video-wrapper" v-show="!loading"
-         @play="onPlayerPlay($event)"
-         @pause="onPlayerPause($event)"
-         @ready="playerReadied"
-         @statechanged="playerStateChanged($event)"
-         v-video-player:videoPlayer="{ sources: video.sources }">
+    <div class="video-wrapper">
+      <video-c :sources="video.sources"></video-c>
     </div>
     <div class="description-wrapper">
       <div v-html="product.description"></div>
@@ -17,6 +13,8 @@
 </template>
 
 <script>
+import videoC from '~/components/video.vue'
+
 export default {
   props: {
     product: {
@@ -24,14 +22,12 @@ export default {
       required: true
     }
   },
+  components: {
+    videoC
+  },
   data() {
     return {
       loading: true
-    }
-  },
-  methods: {
-    playerReadied(e) {
-      this.loading = false
     }
   },
   computed: {

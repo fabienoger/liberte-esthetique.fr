@@ -21,8 +21,7 @@ module.exports = {
       ]
     },
     plugins: [
-      { src: '~/plugins/iview.js', ssr: true },
-      { src: '~/plugins/vue-video-player.js', ssr: true }
+      { src: '~/plugins/iview.js', ssr: true }
     ],
     css: [
       'iview/dist/styles/iview.css',
