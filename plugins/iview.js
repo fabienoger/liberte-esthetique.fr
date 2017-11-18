@@ -1,7 +1,4 @@
 import Vue from 'vue'
+import iView from 'iview'
 
-if (process.browser) {
-  const iView = require('iview')
-  Vue.use(iView)
-}
-import 'iview/dist/styles/iview.css'
+Vue.use(iView)

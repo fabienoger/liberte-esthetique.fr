@@ -1,19 +1,16 @@
-FROM node:7.8.0-alpine
+FROM node:7.8-alpine
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+ADD . /app
+WORKDIR /app
 
-# Install app dependencies
-RUN apk update && apk upgrade && apk add git
+RUN npm rebuild node-sass --force/
+RUN npm install
 
-ONBUILD COPY . /usr/src/app/
-ONBUILD RUN npm install
+ARG APP_NODE_ENV=production
+ENV NODE_ENV ${NODE_ENV}
 
-# Build app
-ONBUILD RUN npm run build
+RUN npm run build
 
-ENV HOST 0.0.0.0
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD ["npm", "run", "start"]

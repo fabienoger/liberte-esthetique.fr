@@ -3,6 +3,7 @@ services:
   web:
     build: .
     restart: always
+    # command: npm run dev
     environment:
      - HOST=0.0.0.0
      - PORT=3000

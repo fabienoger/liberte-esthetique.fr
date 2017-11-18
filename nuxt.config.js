@@ -16,13 +16,16 @@ module.exports = {
     },
     loading: { color: '#3bbca1' },
     build: {
-        vendor: ['iview', 'vue-video-player']
+      vendor: [
+        'iview'
+      ]
     },
-    css: [
-      '@/assets/css/main.scss'
-    ],
     plugins: [
-      { src: '~/plugins/iview', ssr: false },
-      { src: '~/plugins/vue-video-player', ssr: true }
+      { src: '~/plugins/iview.js', ssr: true },
+      { src: '~/plugins/vue-video-player.js', ssr: true }
+    ],
+    css: [
+      'iview/dist/styles/iview.css',
+      '@/assets/css/main.scss'
     ]
 }
