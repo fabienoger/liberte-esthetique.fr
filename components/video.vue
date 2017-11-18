@@ -1,7 +1,7 @@
 <template>
   <div class="video">
-    <video width="400" controls>
-      <source :src="sources[0].src" :type="sources[0].type">
+    <video controls>
+      <source v-for="source in sources" :src="source.src" :type="source.type">
         Your browser does not support HTML5 video.
     </video>
   </div>
@@ -19,4 +19,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.video {
+  video {
+    width: 100%;
+  }
+}
 </style>

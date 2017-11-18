@@ -32,12 +32,7 @@ export default {
   },
   computed: {
     video() {
-      return {
-        sources: [{
-          src: `~/assets/videos/${this.product.video.name}`,
-          type: this.product.video.type
-        }]
-      }
+      return this.product.video
     }
   }
 }
