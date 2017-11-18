@@ -1,94 +1,187 @@
 <template>
+
   <footer class="footer-distributed">
-		<div class="footer-left">
-			<h3>Liberté<span>Esthetique</span></h3>
-			<p class="footer-links">
-				<a href="#">Accueil</a>
-				·
-				<a href="#">Contact</a>
-			</p>
-			<p class="footer-company-name">Liberté Esthetique &copy; 2017</p>
-			<div class="footer-icons">
+
+  <div class="footer-left">
+
+    <h3>Liberté<span>Esthetique</span></h3>
+
+    <p class="footer-links">
+      <nuxt-link to="/">Accueil</nuxt-link>
+      ·
+      <nuxt-link to="/contact">Contact</nuxt-link>
+    </p>
+    <p class="footer-company-name">Liberté Esthetique &copy; 2017</p>
+  </div>
+  <div class="footer-center">
+
+    <div>
+      <i class="fa fa-map-marker"></i>
+
+      <p><span>30 Ter Rue de la Liberté</span> 94300 Vincennes, France</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+1 555 123456</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com">support@company.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>A propos</span>
+      Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+    </p>
+    <div class="footer-icons">
         <a href="#">
           <Icon type="social-twitter"></Icon>
         </a>
         <a href="#">
           <Icon type="social-facebook"></Icon>
         </a>
-			</div>
-		</div>
-		<div class="footer-right">
-			<p>Contact Us</p>
-			<form action="#" method="post">
-				<input type="text" name="email" placeholder="Email" />
-				<textarea name="message" placeholder="Message"></textarea>
-				<button>Send</button>
-			</form>
-		</div>
-	</footer>
+        <a href="#">
+          <Icon type="social-github"></Icon>
+        </a>
+    </div>
+  </div>
+</footer>
+
 </template>
 
 <style lang="scss" scoped>
-.footer-distributed {
+@import "~assets/css/variables.scss";
+
+.footer-distributed{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
-	font: bold 16px sans-serif;
 	text-align: left;
+	font: bold 16px sans-serif;
 
-	padding: 50px 60px 40px;
-	margin-top: 80px;
-	overflow: hidden;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
 }
 
 /* Footer left */
 
-.footer-distributed .footer-left {
-	float: left;
+.footer-distributed .footer-left{
+	width: 40%;
 }
 
 /* The company logo */
 
-.footer-distributed h3 {
+.footer-distributed h3{
 	color:  #ffffff;
 	font: normal 36px 'Cookie', cursive;
-	margin: 0 0 10px;
+	margin: 0;
 }
 
-.footer-distributed h3 span {
-	color:  #5383d3;
+.footer-distributed h3 span{
+	color:  $primary-color;
 }
 
 /* Footer links */
 
-.footer-distributed .footer-links {
+.footer-distributed .footer-links{
 	color:  #ffffff;
-	margin: 0 0 10px;
+	margin: 20px 0 12px;
 	padding: 0;
 }
 
-.footer-distributed .footer-links a {
+.footer-distributed .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
 }
 
-.footer-distributed .footer-company-name {
+.footer-distributed .footer-company-name{
 	color:  #8f9296;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
 }
 
-/* Footer social icons */
+/* Footer Center */
 
-.footer-distributed .footer-icons {
-	margin-top: 40px;
+.footer-distributed .footer-center{
+	width: 35%;
 }
 
-.footer-distributed .footer-icons a {
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  $primary-color;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
 	display: inline-block;
 	width: 35px;
 	height: 35px;
@@ -105,128 +198,25 @@
 	margin-bottom: 5px;
 }
 
-/* Footer Right */
-
-.footer-distributed .footer-right {
-	float: right;
-}
-
-.footer-distributed .footer-right p {
-	display: inline-block;
-	vertical-align: top;
-	margin: 15px 42px 0 0;
-	color: #ffffff;
-}
-
-/* The contact form */
-
-.footer-distributed form {
-	display: inline-block;
-}
-
-.footer-distributed form input,
-.footer-distributed form textarea {
-	display: block;
-	border-radius: 3px;
-	box-sizing: border-box;
-	background-color:  #1f2022;
-	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-	border: none;
-	resize: none;
-
-	font: inherit;
-	font-size: 14px;
-	font-weight: normal;
-	color:  #d1d2d2;
-
-	width: 400px;
-	padding: 18px;
-}
-
-.footer-distributed ::-webkit-input-placeholder {
-	color:  #5c666b;
-}
-
-.footer-distributed ::-moz-placeholder {
-	color:  #5c666b;
-	opacity: 1;
-}
-
-.footer-distributed :-ms-input-placeholder {
-	color:  #5c666b;
-}
-
-
-.footer-distributed form input {
-	height: 55px;
-	margin-bottom: 15px;
-}
-
-.footer-distributed form textarea {
-	height: 100px;
-	margin-bottom: 20px;
-}
-
-.footer-distributed form button {
-	border-radius: 3px;
-	background-color:  #33383b;
-	color: #ffffff;
-	border: 0;
-	padding: 15px 50px;
-	font-weight: bold;
-	float: right;
-}
-
 /* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 1000px) {
+@media (max-width: 880px) {
 
-	.footer-distributed {
+	.footer-distributed{
 		font: bold 14px sans-serif;
 	}
 
-	.footer-distributed .footer-company-name {
-		font-size: 12px;
-	}
-
-	.footer-distributed form input,
-	.footer-distributed form textarea{
-		width: 250px;
-	}
-
-	.footer-distributed form button {
-		padding: 10px 35px;
-	}
-
-}
-
-@media (max-width: 800px) {
-
-	.footer-distributed {
-		padding: 30px;
-	}
-
 	.footer-distributed .footer-left,
-	.footer-distributed .footer-right {
-		float: none;
-		max-width: 300px;
-		margin: 0 auto;
-	}
-
-	.footer-distributed .footer-left {
-		margin-bottom: 40px;
-	}
-
-	.footer-distributed form {
-		margin-top: 30px;
-	}
-
-	.footer-distributed form {
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
 		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
 	}
 
-	.footer-distributed form button {
-		float: none;
+	.footer-distributed .footer-center i{
+		margin-left: 0;
 	}
 }
 </style>
