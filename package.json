@@ -6,7 +6,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "iview": "^2.6.0",
+    "iview": "^2.7.3",
     "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
