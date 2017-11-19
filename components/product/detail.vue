@@ -4,7 +4,7 @@
       <Spin size="large" fix></Spin>
     </div>
     <div class="video-wrapper">
-      <video-c :sources="video.sources"></video-c>
+      <video-c :video="video"></video-c>
     </div>
     <div class="description-wrapper">
       <div v-html="product.description"></div>
