@@ -1,8 +1,5 @@
 <template>
   <div class="product-detail">
-    <div class="spin-container" v-if="loading">
-      <Spin size="large" fix></Spin>
-    </div>
     <div class="video-wrapper">
       <video-c :video="video"></video-c>
     </div>
