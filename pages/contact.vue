@@ -5,7 +5,7 @@
     </h1>
     <Row>
       <Col span="12">
-        <div>Carte</div>
+        <map-c></map-c>
       </Col>
       <Col span="12">
         <informations></informations>
@@ -18,11 +18,13 @@
 <script>
 import contactForm from '~/components/contact-form.vue'
 import informations from '~/components/informations.vue'
+import mapC from '~/components/map.vue'
 
 export default {
   components: {
     contactForm,
-    informations
+    informations,
+    mapC
   }
 }
 </script>
