@@ -4,10 +4,10 @@
       Contact
     </h1>
     <Row>
-      <Col span="12">
+      <Col :xs="24" :md="12">
         <map-c></map-c>
       </Col>
-      <Col span="12">
+      <Col :xs="24" :md="12">
         <informations></informations>
         <contact-form></contact-form>
       </Col>

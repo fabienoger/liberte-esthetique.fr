@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="informations">
     <Card>
       <p slot="title">Coordonnées</p>
       <p>
@@ -21,16 +21,18 @@
           <Icon type="ios-telephone"></Icon>
           Téléphone
         </div>
-        <a href="tel:0177015158">01 77 01 51 58</a>
+        <a target="_blank" href="tel:0177015158">01 77 01 51 58</a>
       </p>
     </Card>
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+.informations {
+  margin: 0 15px 15px 15px;
+}
 </style>

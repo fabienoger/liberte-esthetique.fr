@@ -33,5 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
+  margin: 0 15px 15px 15px;
 }
 </style>
