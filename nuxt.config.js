@@ -17,11 +17,13 @@ module.exports = {
     loading: { color: '#3bbca1' },
     build: {
       vendor: [
-        'iview'
+        'iview',
+        'vue2-leaflet'
       ]
     },
     plugins: [
-      { src: '~/plugins/iview.js', ssr: true }
+      { src: '~/plugins/iview.js', ssr: true },
+      { src: '~/plugins/vue2-leaflet.js', ssr: false }
     ],
     css: [
       'iview/dist/styles/iview.css',
