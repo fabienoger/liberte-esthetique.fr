@@ -39,7 +39,10 @@ export default {
 @import "~assets/css/variables.scss";
 
 .product-detail {
-  .video-wrapper {}
+  .video-wrapper {
+    margin: 0 100px;
+    max-height: 100%;
+  }
   .description-wrapper {
     background-color: $primary-color-inverse;
     color: $primary-color;
