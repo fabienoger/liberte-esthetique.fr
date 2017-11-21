@@ -5,7 +5,7 @@
         <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
         <v-marker :lat-lng="[48.849419, 2.441565]">
           <v-popup>
-            <div>
+            <div class="leaflet-popup-content">
               <h3>Coordonnées</h3>
               <p>
                 <div class="ivu-tag ivu-tag-checked">
@@ -52,5 +52,14 @@ export default {
 .map {
   height: 500px;
   width: 100%;
+
+  .leaflet-popup-content {
+    display: none;
+  }
+  .leaflet-pane.leaflet-popup-pane {
+    .leaflet-popup-content {
+      display: block;
+    }
+  }
 }
 </style>

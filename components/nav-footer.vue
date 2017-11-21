@@ -81,7 +81,6 @@
 
 .footer-distributed h3{
 	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
 	margin: 0;
 }
 
