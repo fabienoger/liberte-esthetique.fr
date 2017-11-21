@@ -22,7 +22,7 @@
     </div>
     <div>
       <i class="fa fa-phone"></i>
-      <p>+1 555 123456</p>
+      <p><a href="tel:0177015158">01 77 01 51 58</a></p>
     </div>
     <div>
       <i class="fa fa-envelope"></i>

@@ -21,7 +21,7 @@
           <Icon type="ios-telephone"></Icon>
           Téléphone
         </div>
-        01 77 01 51 58
+        <a href="tel:0177015158">01 77 01 51 58</a>
       </p>
     </Card>
   </div>

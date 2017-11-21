@@ -4,16 +4,16 @@
       <div class="header-title">
         Liberté Esthetique
       </div>
-        <Menu mode="horizontal" theme="light" active-name="1">
+        <Menu mode="horizontal" theme="light" :active-name="activeName">
             <div class="header-nav">
                 <nuxt-link to="/">
-                  <MenuItem name="1">
+                  <MenuItem name="index">
                       <Icon type="home"></Icon>
                       Accueil
                   </MenuItem>
                 </nuxt-link>
                 <nuxt-link to="/contact">
-                  <MenuItem name="2">
+                  <MenuItem name="contact">
                       <Icon type="email"></Icon>
                       Contact
                   </MenuItem>
@@ -23,6 +23,16 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+    computed: {
+        activeName() {
+            return this.$route.name
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import "~assets/css/variables.scss";
