@@ -19,7 +19,9 @@
                   <Icon type="email"></Icon>
                   Email
                 </div>
-                contact@contact.com
+                <a href="mailto:liberte.esthetique@gmail.com">
+                  liberte.esthetique@gmail.com
+                </a>
               </p>
               <p>
                 <div class="ivu-tag ivu-tag-checked">

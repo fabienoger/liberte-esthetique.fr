@@ -14,7 +14,6 @@
     <p class="footer-company-name">Liberté Esthetique &copy; 2017</p>
   </div>
   <div class="footer-center">
-
     <div>
       <i class="fa fa-map-marker"></i>
 
@@ -26,7 +25,11 @@
     </div>
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="mailto:support@company.com">support@company.com</a></p>
+      <p>
+        <a href="mailto:liberte.esthetique@gmail.com">
+          liberte.esthetique@gmail.com
+        </a>
+      </p>
     </div>
   </div>
   <div class="footer-right">
