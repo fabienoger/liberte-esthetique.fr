@@ -1,5 +1,5 @@
 <template>
-  <main role="main">
+  <main role="main" class="contact">
     <h1 role="heading" aria-level="1" class="text-center page-header">
       Contact
     </h1>
@@ -29,5 +29,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.contact {
+  div.ivu-row {
+    margin-top: 50px;
+  }
+}
 </style>

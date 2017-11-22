@@ -44,9 +44,7 @@ export default {
     max-height: 100%;
   }
   .description-wrapper {
-    background-color: $primary-color-inverse;
     color: $primary-color;
-    border-bottom: 2px solid $primary-color;
     padding: 30px 0;
     text-align: center;
     font-size: 2em;

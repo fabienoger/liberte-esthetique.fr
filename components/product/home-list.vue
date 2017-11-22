@@ -29,5 +29,8 @@ export default {
 
 <style lang="scss" scoped>
 .product-home-list {
+  div.ivu-row {
+    margin-top: 50px;
+  }
 }
 </style>

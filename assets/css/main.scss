@@ -1,5 +1,9 @@
 @import './variables.scss';
 
+body {
+  background: url('~assets/images/crossword.png')
+}
+
 .text-center {
   text-align: center;
 }
@@ -10,8 +14,8 @@
 
 .page-header {
   color: $primary-color;
-  background-color: $primary-color-inverse;
   padding: 30px 0 15px 0;
+  font-size: 30px;
   margin-bottom: 15px;
 }
 
