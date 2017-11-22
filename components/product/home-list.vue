@@ -3,7 +3,7 @@
     <h1 role="heading" aria-level="1" class="text-center page-header">Produits</h1>
     <Row role="row">
       <template v-for="product in products">
-        <Col span="8" role="gridcell">
+        <Col role="gridcell" :xs="24" :md="8">
           <home-item :product="product"></home-item>
         </Col>
       </template>
@@ -31,6 +31,9 @@ export default {
 .product-home-list {
   div.ivu-row {
     margin-top: 50px;
+    div.ivu-col {
+      margin: 15px 0;
+    }
   }
 }
 </style>
