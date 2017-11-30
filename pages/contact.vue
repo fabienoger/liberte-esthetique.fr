@@ -3,15 +3,17 @@
     <h1 role="heading" aria-level="1" class="text-center page-header">
       Contact
     </h1>
-    <Row>
-      <Col :xs="24" :md="12">
-        <map-c></map-c>
-      </Col>
-      <Col :xs="24" :md="12">
-        <informations></informations>
-        <contact-form></contact-form>
-      </Col>
-    </Row>
+    <div class="container">
+      <Row>
+        <Col :xs="24" :md="12">
+          <map-c></map-c>
+        </Col>
+        <Col :xs="24" :md="12" class="informations-contact-form">
+          <informations></informations>
+          <contact-form></contact-form>
+        </Col>
+      </Row>
+    </div>
   </main>
 </template>
 
@@ -33,6 +35,11 @@ export default {
 .contact {
   div.ivu-row {
     margin-top: 50px;
+  }
+  @media (max-width: 992px) {
+    .informations-contact-form {
+      margin-top: 50px;
+    }
   }
 }
 </style>

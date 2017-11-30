@@ -1,6 +1,5 @@
 <template>
   <div class="product-home-list">
-    <h1 role="heading" aria-level="1" class="text-center page-header">Produits</h1>
     <Row role="row">
       <template v-for="product in products">
         <Col role="gridcell" :xs="24" :md="8">

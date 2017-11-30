@@ -1,6 +1,11 @@
 <template>
   <main role="main">
-    <product-home-list></product-home-list>
+    <h1 role="heading" aria-level="1" class="text-center page-header">
+      Produits
+    </h1>
+    <div class="container">
+      <product-home-list></product-home-list>
+    </div>
   </main>
 </template>
 

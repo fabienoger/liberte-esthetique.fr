@@ -1,7 +1,9 @@
 <template>
   <main role="main">
     <h1 role="heading" aria-level="1" class="text-center page-header">{{ product.title }}</h1>
-    <product-detail :product="product"></product-detail>
+    <div class="container">
+      <product-detail :product="product"></product-detail>
+    </div>
   </main>
 </template>
 
