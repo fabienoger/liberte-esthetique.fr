@@ -2,7 +2,7 @@
   <header class="nav-header">
     <div class="header">
       <div class="header-title">
-        Liberté Esthetique
+        Liberté Esthétique
       </div>
         <Menu mode="horizontal" theme="light" :active-name="activeName">
             <div class="header-nav">

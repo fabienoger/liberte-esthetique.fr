@@ -1,10 +1,11 @@
 module.exports = {
     head: {
-        title: 'Liberté Esthetique',
+        title: 'Liberté Esthétique',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'Liberté Esthetique', content: 'Liberté Esthetique website' }
+            { hid: 'description', name: 'description', content: 'Cabinet d\'esthétique à Vincennes. La solution minceur et anti-âge. Une nouvelle méthode amincissant.' },
+            { hid: 'keywords', name: 'keywords', content: 'esthétique, solution, minceur, anti-âge, cryolipolyse, LPG-LED, jetpeel' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

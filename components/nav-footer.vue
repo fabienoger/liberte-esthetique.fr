@@ -4,14 +4,14 @@
 
   <div class="footer-left">
 
-    <h3>Liberté<span>Esthetique</span></h3>
+    <h3>Liberté<span>Esthétique</span></h3>
 
     <p class="footer-links">
       <nuxt-link to="/">Accueil</nuxt-link>
       ·
       <nuxt-link to="/contact">Contact</nuxt-link>
     </p>
-    <p class="footer-company-name">Liberté Esthetique &copy; 2017</p>
+    <p class="footer-company-name">Liberté Esthétique &copy; 2017</p>
   </div>
   <div class="footer-center">
     <div>
