@@ -28,6 +28,7 @@ module.exports = {
     ],
     css: [
       'iview/dist/styles/iview.css',
-      '@/assets/css/main.scss'
+      '@/assets/css/main.scss',
+      '@/assets/css/product.scss'
     ]
 }
