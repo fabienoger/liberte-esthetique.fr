@@ -10,7 +10,6 @@
     "mailgun-js": "^0.16.0",
     "nuxt": "^1.4.0",
     "vue": "2.4.4",
-    "vue-no-ssr": "^0.2.1",
     "vue-server-renderer": "2.3.3",
     "vue-template-compiler": "2.4.4",
     "vue2-leaflet": "^0.0.57"

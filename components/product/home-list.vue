@@ -1,8 +1,8 @@
 <template>
   <div class="product-home-list">
     <Row role="row">
-      <template v-for="product in products">
-        <Col role="gridcell" :xs="24" :md="8">
+      <template v-for="(product, index) in products">
+        <Col role="gridcell" :xs="24" :md="8" :key="'product-' + index">
           <home-item :product="product"></home-item>
         </Col>
       </template>
