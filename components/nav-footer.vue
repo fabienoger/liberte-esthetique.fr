@@ -35,7 +35,12 @@
   <div class="footer-right">
     <p class="footer-company-about">
       <span>A propos</span>
-      Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+      <p>Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</p>
+      <p>Soins du corps et du visage, Anti âge, Amincissement, Traitement de la cellulite et du relâchement.</p>
+      <p>Sur tout type de peau, quelque soit votre âge.</p>
+      <p>Relaxation et recentrage d'énergie sont aussi nécessaires pour votre bien être.</p>
+      <p>Afin d'agir avec efficacité, notre équipe spécialisée est à votre écoute pour comprendre et analyser vos demandes.</p>
+      <p>A l'aide de nos différents modules haut de gamme, certifiés CE médical 2017, nous trouverons la solution la mieux adaptée à vos attentes.</p>
     </p>
     <div class="footer-icons">
         <a href="#">

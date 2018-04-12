@@ -30,5 +30,10 @@ module.exports = {
       'iview/dist/styles/iview.css',
       '@/assets/css/main.scss',
       '@/assets/css/product.scss'
-    ]
+    ],
+    generate: {
+        minify: {
+            collapseWhitespace: false
+        }
+    }
 }
