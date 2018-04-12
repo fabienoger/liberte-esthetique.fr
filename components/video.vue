@@ -1,7 +1,7 @@
 <template>
   <div class="video">
-    <video controls>
-      <source v-for="source in video.sources" :src="source.src" :type="source.type">
+    <video controls :poster="poster">
+      <source v-for="(source, index) in video.sources" :src="source.src" :type="source.type" :key="'source' + index">
         Your browser does not support HTML5 video.
     </video>
   </div>
@@ -13,6 +13,10 @@ export default {
     video: {
       type: Object,
       required: true
+    },
+    poster: {
+      type: String,
+      require: true
     }
   },
   data() {

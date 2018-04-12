@@ -1,7 +1,7 @@
 <template>
   <div class="product-detail">
     <div class="video-wrapper">
-      <video-c :video="video"></video-c>
+      <video-c :video="video" :poster="product.images.logo"></video-c>
     </div>
     <div class="description-wrapper">
       <div v-html="product.description"></div>
