@@ -1,4 +1,5 @@
 .nuxt
+build
 node_modules
 static/videos
 static/images

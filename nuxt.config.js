@@ -36,5 +36,16 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     }
+  },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/toast'
+  ],
+  axios: {
+    baseURL: 'http://localhost:3000'
+  },
+  toast: {
+    position: 'top-right',
+    duration: 10000
   }
 }
