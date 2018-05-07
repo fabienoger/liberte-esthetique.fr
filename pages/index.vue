@@ -35,5 +35,6 @@ export default {
 .products-title {
   margin-top: 30px;
   color: $primary-color;
+  font-size: 3em;
 }
 </style>

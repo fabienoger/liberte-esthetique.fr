@@ -15,10 +15,14 @@
 .presentation {
   font-size: 1.5em;
   color: $primary-color;
-  margin: 15px 0;
+  margin-bottom: 15px;
+  padding-top: 15px;
   p {
     font-weight: 600;
     margin: 10px 0;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 </style>
