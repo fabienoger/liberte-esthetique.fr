@@ -1,6 +1,6 @@
 <template>
   <div class="text-center presentation">
-    <p>Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</p>
+    <h2>Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</h2>
     <p>Soins du corps et du visage, Anti âge, Amincissement, Traitement de la cellulite et du relâchement.</p>
     <p>Sur tout type de peau, quelque soit votre âge.</p>
     <p>Relaxation et recentrage d'énergie sont aussi nécessaires pour votre bien être.</p>
@@ -14,11 +14,17 @@
 
 .presentation {
   font-size: 1.5em;
-  color: $primary-color;
-  margin-bottom: 15px;
-  padding-top: 15px;
+  color: $primary-color-inverse;
+  // background-color: $primary-color-inverse;
+  margin-bottom: 50px;
+  padding-top: 50px;
+
+  h2 {
+    padding: 30px 0;
+  }
+
   p {
-    font-weight: 600;
+    font-size: 1.5em;
     margin: 10px 0;
     &:first-child {
       margin-top: 0;

@@ -1,15 +1,18 @@
 <template>
   <main role="main">
-    <div class="container">
+    <div>
       <presentation></presentation>
+      <home-carousel></home-carousel>
       <Row>
-          <Col span="12" offset="6">
-            <home-carousel></home-carousel>
-          </Col>
+        <Col :lg="{ span: 12, offset: 6 }" :xs="{ offset: 3, span: 16 }">
+          <div class="alert-wrapper">
+            <Alert show-icon>
+              Bon à savoir: Liberté Esthetique intervient aussi dans les entreprises.
+              <Icon type="information-circled" slot="icon"></Icon>
+            </Alert>
+          </div>
+        </Col>
       </Row>
-      <h1 role="heading" aria-level="1" class="text-center products-title">
-        Produits
-      </h1>
       <product-home-list></product-home-list>
     </div>
   </main>
@@ -32,9 +35,10 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/css/variables.scss";
 
-.products-title {
-  margin-top: 30px;
-  color: $primary-color;
-  font-size: 3em;
+.alert-wrapper {
+  padding: 50px 0;
+  .ivu-alert {
+    font-size: 1.6em;
+  }
 }
 </style>

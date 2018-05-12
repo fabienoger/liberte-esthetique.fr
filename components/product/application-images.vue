@@ -32,7 +32,7 @@ export default {
 .application-images {
   h2 {
     font-size: 25px;
-    color: $primary-color;
+    color: $primary-color-inverse;
     margin-bottom: 50px;
   }
   .application-image {

@@ -1,12 +1,9 @@
 <template>
-  <div class="product-home-item text-center" @click="redirect()">
-    <Card>
-      <h2 slot="title" class="title">
-        {{ product.title }}
-      </h2>
+  <div class="product-home-item" @click="redirect()">
+    <div class="product-logo-wrapper">
       <img :src="product.images.logo" v-if="product.images.logo" class="product-logo" />
-      <div class="product-description" v-html="product.description"></div>
-    </Card>
+    </div>
+    <div class="product-description" v-html="product.description"></div>
   </div>
 </template>
 
@@ -33,12 +30,17 @@ export default {
   cursor: pointer;
   padding: 0 15px;
 
-  .product-logo {
-    width: 100%;
-    margin-bottom: 30px;
+  .product-logo-wrapper {
+    height: 250px;
+    .product-logo {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
+
   .product-description {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    padding: 30px;
   }
 }
 </style>

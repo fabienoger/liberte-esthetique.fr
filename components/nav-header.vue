@@ -4,33 +4,39 @@
       <div class="header-title">
         Liberté Esthétique
       </div>
-        <Menu mode="horizontal" theme="light" :active-name="activeName">
-            <div class="header-nav">
-                <nuxt-link to="/">
-                  <MenuItem name="index">
-                      <Icon type="home"></Icon>
-                      Accueil
-                  </MenuItem>
-                </nuxt-link>
-                <nuxt-link to="/contact">
-                  <MenuItem name="contact">
-                      <Icon type="email"></Icon>
-                      Contact
-                  </MenuItem>
-                </nuxt-link>
-            </div>
-        </Menu>
+      <Menu mode="horizontal" theme="light" :active-name="activeName">
+        <div class="header-nav">
+          <nuxt-link to="/">
+            <MenuItem name="index">
+              <Icon type="home"></Icon>
+              Accueil
+            </MenuItem>
+          </nuxt-link>
+          <nuxt-link to="/tarifs">
+            <MenuItem name="tarifs">
+              <Icon type="cash"></Icon>
+              Tarifs
+            </MenuItem>
+          </nuxt-link>
+          <nuxt-link to="/contact">
+            <MenuItem name="contact">
+              <Icon type="email"></Icon>
+              Contact
+            </MenuItem>
+          </nuxt-link>
+        </div>
+      </Menu>
     </div>
   </header>
 </template>
 
 <script>
 export default {
-    computed: {
-        activeName() {
-            return this.$route.name
-        }
+  computed: {
+    activeName() {
+      return this.$route.name
     }
+  }
 }
 </script>
 
@@ -44,12 +50,14 @@ export default {
   .header-title {
     background-color: $primary-color;
     color: $primary-color-inverse;
+    font-style: italic;
+    font-weight: bold;
     padding: 15px 0;
     text-align: center;
     font-size: 2em;
   }
   .header-nav {
-    width: 220px;
+    width: 320px;
     margin: 0 auto;
   }
 }

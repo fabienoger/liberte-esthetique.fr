@@ -42,7 +42,7 @@ module.exports = {
     '@nuxtjs/toast'
   ],
   axios: {
-    baseURL: 'http://localhost:3000'
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
   toast: {
     position: 'top-right',

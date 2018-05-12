@@ -1,11 +1,7 @@
 <template>
   <Carousel v-model="carouselValue" loop autoplay class="home-carousel">
-    <CarouselItem v-for="(images, index) in $options.groupedImages" :key="'carousel-item' + index">
-      <Row role="row">
-        <Col role="gridcell" v-for="(image, i) in images" :md="12" :key="'Col' + i">
-          <img :src="`/images/cabinet/${image}.jpg`" />
-        </Col>
-      </Row>
+    <CarouselItem v-for="i in 8" :key="'carousel-item' + i">
+      <img :src="`/images/cabinet/${i}.jpg`" height="532" width="800"/>
     </CarouselItem>
   </Carousel>
 </template>
@@ -23,6 +19,9 @@ export default {
 
 <style lang="scss" scoped>
 .home-carousel {
-  margin: 30px 0;
+  margin: 30px auto;
+  display: block; 
+  max-width: 800px;
+  max-height: 532px;
 }
 </style>

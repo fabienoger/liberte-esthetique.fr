@@ -3,9 +3,11 @@
     <div class="video-wrapper">
       <video-c :video="video" :poster="product.images.logo"></video-c>
     </div>
-    <div class="description-wrapper">
-      <div v-html="product.description"></div>
-    </div>
+    <Row>
+      <Col :lg="{ span: 8, offset: 8 }" :xs="{ span: 24 }">
+        <div class="description-wrapper" v-html="product.description"></div>
+      </Col>
+    </Row>
     <hr />
     <Row class="application-wrapper" v-if="product.images && product.images.application">
       <application-images :images="product.images.application"></application-images>
@@ -50,10 +52,12 @@ export default {
     max-height: 100%;
   }
   .description-wrapper {
-    color: $primary-color;
-    padding: 30px 0;
-    text-align: center;
-    font-size: 2em;
+    background-color: $primary-color-inverse;
+    color: $primary-color-dark;
+    padding: 30px;
+    margin: 30px 0;
+    width: auto;
+    font-size: 1.5em;
   }
   .application-wrapper {
     margin-top: 50px;

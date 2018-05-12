@@ -32,6 +32,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+main {
+  padding-bottom: 100px;
+}
 .contact {
   div.ivu-row {
     margin-top: 50px;
