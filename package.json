@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
-    "start": "cross-env NODE_ENV=production node build/main.js"
+    "start": "cross-env NODE_ENV=production BASE_URL=http://liberte-esthetique.fr node build/main.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
