@@ -1,5 +1,5 @@
 <template>
-  <div class="application-images">
+  <div class="application-images" v-if="images && images.length > 0">
     <h2 role="heading" aria-level="2" class="text-center">
       Mise en application
     </h2>

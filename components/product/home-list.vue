@@ -5,7 +5,7 @@
     </h1>
     <Row role="row">
       <template v-for="(product, index) in products">
-        <Col role="gridcell" :xs="24" :md="8" :key="'product-' + index">
+        <Col role="gridcell" :xs="24" :md="12" :key="'product-' + index">
           <home-item :product="product"></home-item>
         </Col>
       </template>

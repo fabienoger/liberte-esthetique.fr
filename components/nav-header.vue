@@ -90,7 +90,7 @@ export default {
     font-weight: bold;
     padding: 15px 0;
     text-align: center;
-    font-size: 2em;
+    font-size: 3.5em;
 
     .nav-button {
       position: absolute;
