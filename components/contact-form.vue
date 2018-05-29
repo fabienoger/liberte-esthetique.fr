@@ -34,15 +34,15 @@ export default {
       }
       return this.$axios.$get('/api/mail', { params })
         .then(res => {
-            this.$toasted.show('Votre message a bien été envoyé.', {
-            type: 'success',
-            theme: 'primary'
-          })
+            this.$Notice.success({
+              title: 'Votre message a bien été envoyé.'
+            })
+            this.email = null
+            this.message = null
         })
         .catch(e => {
-          this.$toasted.show('Une erreur est survenue durant l\'envoi de votre message.', {
-            type: 'error',
-            theme: 'primary'
+          this.$Notice.error({
+            title: 'Une erreur est survenue durant l\'envoi de votre message.'
           })
         })
     }

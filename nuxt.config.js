@@ -38,14 +38,9 @@ module.exports = {
     }
   },
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/toast'
+    '@nuxtjs/axios'
   ],
   axios: {
     browserBaseURL: process.env.BASE_URL || 'http://localhost:3000'
-  },
-  toast: {
-    position: 'top-right',
-    duration: 10000
   }
 }
