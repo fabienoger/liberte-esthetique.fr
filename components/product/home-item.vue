@@ -4,6 +4,15 @@
       <img :src="product.images.logo" v-if="product.images.logo" class="product-logo" />
     </div>
     <div class="product-head" v-html="product.head"></div>
+    <div class="product-footer">
+      <div class="text-center">
+        <a :href="`/products/${product.id}`">
+          <Button icon="md-book" class="custom-btn">
+            Détail du produit
+          </Button>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,7 +26,7 @@ export default {
   },
   methods: {
     redirect() {
-      this.$router.push({ path: `/product/${this.product.id}` })
+      this.$router.push({ path: `/products/${this.product.id}` })
     }
   }
 }
@@ -27,23 +36,31 @@ export default {
 @import "~assets/css/variables.scss";
 
 .product-home-item {
+  // border: 2px solid $primary-color;
+  &:hover {
+    // background-color: $primary-color-clear;
+    // color: $primary-color-inverse;
+    .product-logo-wrapper {
+      padding: 50px;
+    }
+  }
   cursor: pointer;
-  padding: 15px;
-  margin: 30px;
-  border: 1px solid $primary-color;
-  box-shadow: 1px 1px 1px $primary-color;
-
   .product-logo-wrapper {
-    height: 250px;
+    -webkit-transition: padding 0.5s ease-out;
+    -moz-transition: padding 0.5s ease-out;
+    -o-transition: padding 0.5s ease-out;
+    transition: padding 0.5s ease-out;
     .product-logo {
       width: 100%;
-      max-width: 800px;
-      margin-bottom: 30px;
     }
   }
 
   .product-head {
     font-size: 1.5em;
+    padding: 30px;
+    height: 195px;
+  }
+  .product-footer {
     padding: 30px;
   }
 }

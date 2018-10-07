@@ -3,28 +3,34 @@
     <div class="video-wrapper">
       <video-c v-if="video" :video="video" :poster="product.images.logo"></video-c>
     </div>
+    <Row class="list-images-wrapper" v-if="product.images && product.images.avantApres">
+      <list-images :images="product.images.avantApres" title="Résultats"></list-images>
+    </Row>
+    <hr />
     <Row>
-      <Col :lg="{ span: 8, offset: 8 }" :xs="{ span: 24 }">
+      <Col :lg="{ span: 12, offset: 6 }" :xs="{ span: 24 }">
         <div class="description-wrapper">
           <div class="description" v-html="product.description"></div>
           <div class="text-center">
-            <a :href="product.link" target="_blank" class="ivu-btn ivu-btn-primary ivu-btn-circle">
-              <Icon type="link" size="50"></Icon>
+            <a :href="product.link" target="_blank">
+              <Button icon="md-link" class="custom-btn">
+                Site internet
+              </Button>
             </a>
           </div>
         </div>
       </Col>
     </Row>
     <hr />
-    <Row class="application-wrapper" v-if="product.images && product.images.application">
-      <application-images :images="product.images.application"></application-images>
+    <Row class="list-images-wrapper" v-if="product.images && product.images.application">
+      <list-images :images="product.images.application" title="Mise en application"></list-images>
     </Row>
   </div>
 </template>
 
 <script>
 import videoC from '~/components/video.vue'
-import applicationImages from '~/components/product/application-images.vue'
+import listImages from '~/components/product/list-images.vue'
 
 export default {
   props: {
@@ -35,7 +41,7 @@ export default {
   },
   components: {
     videoC,
-    applicationImages
+    listImages
   },
   data() {
     return {
@@ -69,7 +75,7 @@ export default {
       margin-bottom: 30px;
     }
   }
-  .application-wrapper {
+  .list-images-wrapper {
     margin-top: 50px;
   }
 }

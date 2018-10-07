@@ -47,7 +47,7 @@ export default {
 
   div.ivu-row {
     div.ivu-col {
-      margin: 15px 0;
+      margin: 0;
     }
   }
 }
