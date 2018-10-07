@@ -4,11 +4,12 @@
       <presentation></presentation>
       <home-carousel></home-carousel>
       <Row>
-        <Col :lg="{ span: 12, offset: 6 }" :xs="{ offset: 3, span: 16 }">
+        <Col :lg="{ span: 8, offset: 8 }" :xs="{ offset: 6, span: 12 }">
           <div class="alert-wrapper">
             <Alert show-icon>
-              Bon à savoir: Liberté Esthetique intervient aussi dans les entreprises.
-              <Icon type="information-circled" slot="icon"></Icon>
+              Bon à savoir
+              <Icon type="md-information-circle" slot="icon"></Icon>
+              <template slot="desc">Liberté Esthetique intervient aussi dans les entreprises.</template>
             </Alert>
           </div>
         </Col>

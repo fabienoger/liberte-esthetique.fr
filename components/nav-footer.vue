@@ -6,13 +6,19 @@
 
     <h3>Liberté<span>Esthétique</span></h3>
 
-    <p class="footer-links">
+    <div class="footer-links">
       <nuxt-link to="/">Accueil</nuxt-link>
-      ·
+      <div class="products-link">
+        Produits
+        <ul>
+          <li v-for="product in $options.products">
+            <nuxt-link :to="`/products/${product.id}`">{{ product.title }}</nuxt-link>
+          </li>
+        </ul>
+      </div>
       <nuxt-link to="/tarifs">Tarifs</nuxt-link>
-      ·
       <nuxt-link to="/contact">Contact</nuxt-link>
-    </p>
+    </div>
     <p class="footer-company-name">Liberté Esthétique &copy; 2017</p>
   </div>
   <div class="footer-center">
@@ -37,28 +43,34 @@
   <div class="footer-right">
     <p class="footer-company-about">
       <span>A propos</span>
-        Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.
-        Soins du corps et du visage, Anti âge, Amincissement, Traitement de la cellulite et du relâchement.
-        Sur tout type de peau, quelque soit votre âge.
-        Relaxation et recentrage d'énergie sont aussi nécessaires pour votre bien être.
-        Afin d'agir avec efficacité, notre équipe spécialisée est à votre écoute pour comprendre et analyser vos demandes.
-        A l'aide de nos différents modules haut de gamme, certifiés CE médical 2017, nous trouverons la solution la mieux adaptée à vos attentes.
+        <p>Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</p>
+        <p>Soins du corps et du visage, Anti âge, Amincissement, Traitement de la cellulite et du relâchement.</p>
+        <p>Sur tout type de peau, quelque soit votre âge.</p>
+        <p>Relaxation et recentrage d'énergie sont aussi nécessaires pour votre bien être.</p>
+        <p>A l'aide de nos différents modules haut de gamme, certifiés CE médical, nous trouverons la solution la mieux adaptée à vos attentes.</p>
     </p>
     <div class="footer-icons">
         <a href="#" target="_blank">
-          <Icon type="social-twitter"></Icon>
+          <Icon type="logo-twitter"></Icon>
         </a>
         <a href="#" target="_blank">
-          <Icon type="social-facebook"></Icon>
+          <Icon type="logo-facebook"></Icon>
         </a>
         <a href="https://github.com/fabienoger/liberte-esthetique.fr" target="_blank">
-          <Icon type="social-github"></Icon>
+          <Icon type="logo-github"></Icon>
         </a>
     </div>
   </div>
 </footer>
-
 </template>
+
+<script>
+  import { products } from '~/lib/data.js'
+
+  export default {
+    products
+  }
+</script>
 
 <style lang="scss" scoped>
 @import "~assets/css/variables.scss";
@@ -84,7 +96,7 @@
 /* Footer left */
 
 .footer-distributed .footer-left {
-  width: 40%;
+  width: 30%;
 }
 
 /* The company logo */
@@ -104,13 +116,22 @@
   color: #ffffff;
   margin: 20px 0 12px;
   padding: 0;
-}
 
-.footer-distributed .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color: inherit;
+  a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .products-link {
+    ul {
+      list-style-type: none;
+      margin-left: 20px;
+    }
+  }
 }
 
 .footer-distributed .footer-company-name {
@@ -123,7 +144,7 @@
 /* Footer Center */
 
 .footer-distributed .footer-center {
-  width: 35%;
+  width: 30%;
 }
 
 .footer-distributed .footer-center i {
@@ -166,10 +187,10 @@
 /* Footer Right */
 
 .footer-distributed .footer-right {
-  width: 20%;
+  width: 40%;
 }
 
-.footer-distributed .footer-company-about {
+.footer-distributed .footer-right p {
   line-height: 20px;
   color: #92999f;
   font-size: 1.1em;
@@ -188,26 +209,26 @@
 
 .footer-distributed .footer-icons {
   margin-top: 25px;
+  a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
 }
-
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
   .footer-distributed {

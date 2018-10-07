@@ -12,18 +12,34 @@ body {
   margin: 0 100px;
 }
 
-.text-center {
-  text-align: center;
-}
+.text-center { text-align: center; }
+.inline { display: inline; }
 
 .layout-content {
   // background-color: $background-color;
   background: url('~assets/images/dark-triangles.png');
 }
 
+// Iview
+
+.ivu-select-dropdown {
+  border-radius: 0px;
+}
+
 .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover {
   color: $primary-color;
   border-color: $primary-color;
+}
+
+button.custom-btn {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $primary-color-inverse;
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+    background-color: $primary-color-inverse;
+  }
 }
 
 .page-header {

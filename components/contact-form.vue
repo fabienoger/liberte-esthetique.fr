@@ -9,7 +9,7 @@
         <Input v-model="message" size="large" type="textarea" placeholder="Message" />
       </FormItem>
         <FormItem>
-            <Button type="primary" @click="sendForm">Envoyer</Button>
+            <Button icon="md-send" class="custom-btn" @click="sendForm">Envoyer</Button>
         </FormItem>
     </Form>
   </Card>

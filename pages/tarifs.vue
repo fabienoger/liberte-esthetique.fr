@@ -11,7 +11,7 @@
 			<div>
 				<Alert show-icon>
 					Offre DUO
-					<Icon type="information-circled" slot="icon"></Icon>
+					<Icon type="md-information-circle" slot="icon"></Icon>
 					<template slot="desc">Réduction de 50% pour les conjoints et accompagnant(e)s pour toute cure ou cryopolyse prise le même jour.</template>
 				</Alert>
 			</div>

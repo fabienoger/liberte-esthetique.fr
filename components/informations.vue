@@ -2,29 +2,31 @@
   <div class="informations">
     <Card>
       <p slot="title">Coordonnées</p>
-      <p>
-        <div class="ivu-tag ivu-tag-checked">
-          <Icon type="email"></Icon>
-          Email
+      <div>
+        <div class="row">
+          <div class="ivu-tag ivu-tag-checked">
+            <Icon type="md-mail"></Icon>
+            Email
+          </div>
+          <a href="mailto:liberte.esthetique@gmail.com" class="inline">
+            liberte.esthetique@gmail.com
+          </a>
         </div>
-        <a href="mailto:liberte.esthetique@gmail.com">
-          liberte.esthetique@gmail.com
-        </a>
-      </p>
-      <p>
-        <div class="ivu-tag ivu-tag-checked">
-          <Icon type="location"></Icon>
-          Adresse
+        <div class="row">
+          <div class="ivu-tag ivu-tag-checked">
+            <Icon type="md-phone-portrait"></Icon>
+            Téléphone
+          </div>
+          <a target="_blank" href="tel:0177015158" class="inline">01 77 01 51 58</a>
         </div>
-        <span>30 Ter Rue de la Liberté</span> 94300 Vincennes, France
-      </p>
-      <p>
-        <div class="ivu-tag ivu-tag-checked">
-          <Icon type="ios-telephone"></Icon>
-          Téléphone
+        <div class="row">
+          <div class="ivu-tag ivu-tag-checked">
+            <Icon type="md-locate"></Icon>
+            Adresse
+          </div>
+          <span>30 Ter Rue de la Liberté</span> 94300 Vincennes, France
         </div>
-        <a target="_blank" href="tel:0177015158">01 77 01 51 58</a>
-      </p>
+      </div>
     </Card>
   </div>
 </template>
@@ -36,5 +38,8 @@ export default {}
 <style lang="scss" scoped>
 .informations {
   margin: 0 15px 15px 15px;
+  .row {
+    margin-bottom: 10px;
+  }
 }
 </style>
