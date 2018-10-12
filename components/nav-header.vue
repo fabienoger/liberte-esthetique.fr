@@ -4,19 +4,19 @@
       <div class="header-title">
         Liberté Esthétique
         <div @click="showVerticalMenu = !showVerticalMenu">
-          <Icon v-if="windowWidth <= 500" class="nav-button" type="md-menu" size="50"></Icon>
+          <Icon v-if="windowWidth <= 500" class="nav-button" type="md-menu" size="75"></Icon>
         </div>
       </div>
-      <nav-menu v-if="windowWidth > 500"
-        :windowWidth="windowWidth"
-        :activeName="activeName">
-      </nav-menu>
-      <Drawer v-else title="Menu" placement="left" v-model="showVerticalMenu">
-        <nav-menu v-if="windowWidth > 500"
-          :windowWidth="windowWidth"
-          mode="vertical"
-          :activeName="activeName">
-        </nav-menu>
+      <div v-if="windowWidth > 500">
+        <nav-menu :activeName="activeName"></nav-menu>
+      </div>
+      <Drawer placement="left" v-model="showVerticalMenu">
+        <div v-if="windowWidth <= 500">
+          <nav-menu mode="vertical"
+            :activeName="activeName"
+            @close="close">
+          </nav-menu>
+        </div>
       </Drawer>
     </div>
   </header>
@@ -44,7 +44,14 @@ export default {
 		getWindowWidth(event) {
       const windowWidth = document.documentElement.clientWidth
       this.windowWidth = windowWidth
+      if (windowWidth <= 500) {
+        this.showVerticalMenu = false
+      }
       return windowWidth
+    },
+    close() {
+      console.log('close')
+      this.showVerticalMenu = false
     }
   },
   mounted() {
@@ -80,6 +87,12 @@ export default {
       background-color: $primary-color-inverse;
       color: $primary-color;
     }
+  }
+}
+
+@media (max-width: 520px) {
+  .header .header-title {
+    font-size: 2.5em;
   }
 }
 </style>
