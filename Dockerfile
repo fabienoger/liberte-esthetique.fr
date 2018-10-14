@@ -3,7 +3,7 @@ FROM node:9.11.1
 ADD . /app
 WORKDIR /app
 
-RUN yarn
+RUN yarn && yarn build
 
 ARG APP_NODE_ENV=production
 ENV NODE_ENV ${NODE_ENV}

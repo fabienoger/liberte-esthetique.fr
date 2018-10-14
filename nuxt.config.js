@@ -41,6 +41,7 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   axios: {
-    browserBaseURL: process.env.BASE_URL || 'http://localhost:3000'
+    browserBaseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   }
 }
