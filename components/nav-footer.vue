@@ -1,67 +1,68 @@
 <template>
-
   <footer class="footer-distributed">
+    <Row role="row">
+      <Col role="gridcell" :xs="24" :md="8" class="footer-links">
+        <div class="footer-left">
+          <h3>Liberté<span>Esthétique</span></h3>
+          
+          <div>
+            <nuxt-link to="/">Accueil</nuxt-link>
+            <div class="products-link">
+              Produits
+              <ul>
+                <li v-for="product in $options.products">
+                  <nuxt-link :to="`/products/${product.id}`">{{ product.title }}</nuxt-link>
+                </li>
+              </ul>
+            </div>
+            <nuxt-link to="/tarifs">Tarifs</nuxt-link>
+            <nuxt-link to="/contact">Contact</nuxt-link>
+          </div>
+          <p class="footer-company-name">Liberté Esthétique &copy; 2017</p>
+        </div>
+      </Col>
+      <Col role="gridcell" :xs="24" :md="8" class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
 
-  <div class="footer-left">
-
-    <h3>Liberté<span>Esthétique</span></h3>
-
-    <div class="footer-links">
-      <nuxt-link to="/">Accueil</nuxt-link>
-      <div class="products-link">
-        Produits
-        <ul>
-          <li v-for="product in $options.products">
-            <nuxt-link :to="`/products/${product.id}`">{{ product.title }}</nuxt-link>
-          </li>
-        </ul>
-      </div>
-      <nuxt-link to="/tarifs">Tarifs</nuxt-link>
-      <nuxt-link to="/contact">Contact</nuxt-link>
-    </div>
-    <p class="footer-company-name">Liberté Esthétique &copy; 2017</p>
-  </div>
-  <div class="footer-center">
-    <div>
-      <i class="fa fa-map-marker"></i>
-
-      <p><span>30 Ter Rue de la Liberté</span> 94300 Vincennes, France</p>
-    </div>
-    <div>
-      <i class="fa fa-phone"></i>
-      <p><a href="tel:0177015158">01 77 01 51 58</a></p>
-    </div>
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p>
-        <a href="mailto:liberte.esthetique@gmail.com">
-          liberte.esthetique@gmail.com
-        </a>
-      </p>
-    </div>
-  </div>
-  <div class="footer-right">
-    <p class="footer-company-about">
-      <span>A propos</span>
-        <p>Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</p>
-        <p>Soins du corps et du visage, Anti âge, Amincissement, Traitement de la cellulite et du relâchement.</p>
-        <p>Sur tout type de peau, quelque soit votre âge.</p>
-        <p>Relaxation et recentrage d'énergie sont aussi nécessaires pour votre bien être.</p>
-        <p>A l'aide de nos différents modules haut de gamme, certifiés CE médical, nous trouverons la solution la mieux adaptée à vos attentes.</p>
-    </p>
-    <div class="footer-icons">
-        <a href="#" target="_blank">
-          <Icon type="logo-twitter"></Icon>
-        </a>
-        <a href="#" target="_blank">
-          <Icon type="logo-facebook"></Icon>
-        </a>
-        <a href="https://github.com/fabienoger/liberte-esthetique.fr" target="_blank">
-          <Icon type="logo-github"></Icon>
-        </a>
-    </div>
-  </div>
-</footer>
+          <p><span>30 Ter Rue de la Liberté</span> 94300 Vincennes, France</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:0177015158">01 77 01 51 58</a></p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:liberte.esthetique@gmail.com">
+              liberte.esthetique@gmail.com
+            </a>
+          </p>
+        </div>
+      </Col>
+      <Col role="gridcell" :xs="24" :md="8" class="footer-right">
+        <p class="footer-company-about">
+          <span>A propos</span>
+            <p>Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</p>
+            <p>Soins du corps et du visage, Anti âge, Amincissement, Traitement de la cellulite et du relâchement.</p>
+            <p>Sur tout type de peau, quelque soit votre âge.</p>
+            <p>Relaxation et recentrage d'énergie sont aussi nécessaires pour votre bien être.</p>
+            <p>A l'aide de nos différents modules haut de gamme, certifiés CE médical, nous trouverons la solution la mieux adaptée à vos attentes.</p>
+        </p>
+        <div class="footer-icons">
+            <a href="#" target="_blank">
+              <Icon type="logo-twitter"></Icon>
+            </a>
+            <a href="#" target="_blank">
+              <Icon type="logo-facebook"></Icon>
+            </a>
+            <a href="https://github.com/fabienoger/liberte-esthetique.fr" target="_blank">
+              <Icon type="logo-github"></Icon>
+            </a>
+        </div>
+      </Col>
+    </Row>
+  </footer>
 </template>
 
 <script>
@@ -91,12 +92,6 @@
 .footer-distributed .footer-right {
   display: inline-block;
   vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left {
-  width: 30%;
 }
 
 /* The company logo */
@@ -143,10 +138,6 @@
 
 /* Footer Center */
 
-.footer-distributed .footer-center {
-  width: 30%;
-}
-
 .footer-distributed .footer-center i {
   background-color: #33383b;
   color: #ffffff;
@@ -185,10 +176,6 @@
 }
 
 /* Footer Right */
-
-.footer-distributed .footer-right {
-  width: 40%;
-}
 
 .footer-distributed .footer-right p {
   line-height: 20px;
@@ -233,15 +220,6 @@
 @media (max-width: 880px) {
   .footer-distributed {
     font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
   }
 
   .footer-distributed .footer-center i {
