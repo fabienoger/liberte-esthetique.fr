@@ -1,9 +1,19 @@
 <template>
-	<div class="cures">
+	<div class="offres">
 		<h3 role="heading" aria-level="1" class="text-center page-header">
-			Les cures
+			Les offres
 		</h3>
-		<Table stripe :columns="columns" :data="data"></Table>
+		<Alert show-icon>
+			<Icon type="md-information-circle" slot="icon"></Icon>
+			<template slot="desc">Pour une cure nominative de 6 séances, une séance gratuite (hors cryolipolyse).</template>
+		</Alert>
+		<div class="table-wrapper">
+			<Table stripe :columns="columns" :data="data"></Table>
+		</div>
+		<Alert show-icon>
+			<Icon type="md-information-circle" slot="icon"></Icon>
+			<template slot="desc">Carte d'abonnement pour 3 ou 12 mois, nous consulter.</template>
+		</Alert>
 	</div>
 </template>
 
@@ -50,3 +60,11 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss">
+	.offres {
+		.table-wrapper {
+			margin: 25px 0;
+		}
+	}
+</style>
