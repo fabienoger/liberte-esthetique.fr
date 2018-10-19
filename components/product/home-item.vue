@@ -3,14 +3,17 @@
     <div class="product-logo-wrapper">
       <img :src="product.images.logo" v-if="product.images.logo" class="product-logo" />
     </div>
-    <div class="product-head" v-html="product.head"></div>
-    <div class="product-footer">
-      <div class="text-center">
-        <a :href="`/products/${product.id}`">
-          <Button icon="md-book" class="custom-btn">
-            Détail du produit
-          </Button>
-        </a>
+    <div class="product-caption">
+      <div class="blur"></div>
+      <div class="product-head" v-html="product.head"></div>
+      <div class="product-footer">
+        <div class="text-center">
+          <a :href="`/products/${product.id}`">
+            <Button icon="md-book" class="custom-btn">
+              Détail du produit
+            </Button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -43,6 +46,14 @@ export default {
     .product-logo-wrapper {
       padding: 50px;
     }
+    .product-caption {
+      opacity: 1;
+      transform: translateY(-300px);
+      -webkit-transform: translateY(-300px);
+      -moz-transform: translateY(-300px);
+      -ms-transform: translateY(-300px);
+      -o-transform: translateY(-300px);
+    }
   }
   cursor: pointer;
   .product-logo-wrapper {
@@ -52,16 +63,44 @@ export default {
     transition: padding 0.5s ease-out;
     .product-logo {
       width: 100%;
+      vertical-align: middle;
     }
   }
 
-  .product-head {
-    font-size: 1.5em;
-    padding: 30px;
-    height: 195px;
-  }
-  .product-footer {
-    padding: 30px;
+  .product-caption {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    left: 0px;
+    right: 0px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    color: #FFF;
+
+    .blur {
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 300px;
+      width: 100%;
+      z-index: 5;
+      position: absolute;
+    }
+    .product-head {
+      position: absolute;
+      z-index: 6;
+      font-size: 1.5em;
+      padding: 30px;
+      height: 195px;
+    }
+    .product-footer {
+      position: absolute;
+      z-index: 6;
+      width: 100%;
+      top: 195px;
+      padding: 30px;
+    }
   }
 }
 </style>

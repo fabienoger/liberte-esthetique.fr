@@ -76,6 +76,11 @@
 <style lang="scss" scoped>
 @import "~assets/css/variables.scss";
 
+footer {
+  z-index: 10;
+  position: absolute;
+}
+
 .footer-distributed {
   background-color: #292c2f;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);

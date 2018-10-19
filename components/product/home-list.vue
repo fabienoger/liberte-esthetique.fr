@@ -34,7 +34,7 @@ export default {
 
 .product-home-list {
   background-color: $primary-color-inverse;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 
   .products-title {
     margin-top: 30px;

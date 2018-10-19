@@ -1,8 +1,9 @@
 <template>
   <main role="main">
     <div>
-      <presentation></presentation>
+      <h2 class="text-center">Liberté esthétique, c'est avant tout vous comprendre pour agir avec efficacité.</h2>
       <home-carousel></home-carousel>
+      <presentation></presentation>
       <Row>
         <Col :lg="{ span: 8, offset: 8 }" :xs="{ offset: 6, span: 12 }">
           <div class="alert-wrapper">
@@ -35,6 +36,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "~assets/css/variables.scss";
+
+h2 {
+  font-size: 2.5em;
+  color: $primary-color-inverse;
+  padding: 50px 0;
+}
 
 .alert-wrapper {
   padding: 50px 0;
